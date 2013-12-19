@@ -1,0 +1,13 @@
+{
+  "name": "jquery-leadservice",
+  "version": "2.0.6",
+  "main": "jquery.leadservice.js",
+  "dependencies": {
+    "jquery": null,
+    "jquery-cookie-rjs": "0.0.1"
+  },
+  "ignore": [
+    "package.json",
+    "README.md"
+  ]
+}

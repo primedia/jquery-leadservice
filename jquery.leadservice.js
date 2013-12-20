@@ -1,4 +1,4 @@
-define(['jquery', 'jquery-cookie-rjs'], function($) {
+define(['jquery', 'jquery-cookie'], function($) {
   (function($) {
     $.fn.lead_service = function(options) {
       var caller;

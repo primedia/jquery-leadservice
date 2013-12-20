@@ -4,7 +4,7 @@
   "main": "jquery.leadservice.js",
   "dependencies": {
     "jquery": null,
-    "jquery-cookie-rjs": "0.0.1"
+    "jquery-cookie": "latest"
   },
   "ignore": [
     "package.json",

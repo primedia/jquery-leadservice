@@ -1,5 +1,4 @@
 define(['jquery', 'jquery-cookie'], function($) {
-  (function($) {
     $.fn.lead_service = function(options) {
       var caller;
       var form_div = $(this);
@@ -255,5 +254,4 @@ define(['jquery', 'jquery-cookie'], function($) {
         formLoad();
       });
     };
-  })(jQuery);
 });

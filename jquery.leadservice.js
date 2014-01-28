@@ -1,4 +1,4 @@
-define(['jquery', 'jquery-cookie'], function($) {
+define(['jquery', 'jquery.cookie'], function($) {
     $.fn.lead_service = function(options) {
       var caller;
       var form_div = $(this);

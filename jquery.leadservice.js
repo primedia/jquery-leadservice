@@ -165,9 +165,9 @@ define(['jquery', 'jquery.cookie'], function($) {
       };
 
       var formLoad = function() {
-        if (opts.disable_ajax)
+        if (opts.disable_ajax) {
           updateFields();
-        else {
+        } else {
           url = buildNewUrl(opts.form_params);
           form_div.load(url, updateFields);
         }

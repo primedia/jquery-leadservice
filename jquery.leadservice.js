@@ -161,6 +161,7 @@ define(['jquery', 'jquery.cookie'], function($) {
         opts.update_form();
         pre_update_form();
         $('.lead_form', form_div).submit(submitLead);
+        form_div.trigger('LeadFormReady');
       };
 
       var formLoad = function() {
@@ -202,6 +203,7 @@ define(['jquery', 'jquery.cookie'], function($) {
         caller = $(this);
         var status = 'fail';
         if (this.beenSubmitted) return false;
+        caller.trigger('LeadFormSubmitted');
         this.beenSubmitted = true;
         $.ajax({
           url: '/v2/leads/ajax.js',
@@ -232,6 +234,7 @@ define(['jquery', 'jquery.cookie'], function($) {
         pre_update_form();
         $('.lead_form', parent).submit(submitLead);
         opts.update_form();
+        form_div.trigger('LeadFormReady');
         return false;
       };
 

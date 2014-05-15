@@ -159,6 +159,7 @@ define(['jquery', 'jquery.cookie'], function($) {
       var updateFields = function() {
         updateFromCookies();
         opts.update_form();
+        opts.populate_fields();
         pre_update_form();
         $('.lead_form', form_div).submit(submitLead);
         form_div.trigger('LeadFormReady');
@@ -243,9 +244,11 @@ define(['jquery', 'jquery.cookie'], function($) {
       };
 
       var updateForm = function() {};
+      var populateFields = function() {};
 
       var defaults = {
         update_form:  updateForm,
+        populate_fields: populateFields,
         lead_saved:   thankYou,
         lead_error:   handle_errors,
         disable_ajax: false

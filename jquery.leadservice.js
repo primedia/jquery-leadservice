@@ -81,6 +81,13 @@ define(['jquery', 'jquery.cookie'], function($) {
 
             $('.lead_move_date').hide();
           }
+
+          // Show preferred method of contact if specified
+          if (options.show_hide_params.preferred_method_of_contact == "1") {
+            $('.preferred_method_of_contact').show();
+          } else {
+            $('.preferred_method_of_contact').hide();
+          }
         }
       };
 
@@ -105,7 +112,8 @@ define(['jquery', 'jquery.cookie'], function($) {
           beds: '',
           baths: '',
           priceRange: '',
-          reasonForMove: ''
+          reasonForMove: '',
+          preferredMethodOfContact: ''
         };
 
         var arr = cookie.split('|');
@@ -149,6 +157,7 @@ define(['jquery', 'jquery.cookie'], function($) {
           form.find("select.lead_baths>option[value='" + cookie.baths + "']").attr("selected", "selected");
           form.find("select.lead_price_range>option[value='" + cookie.priceRange + "']").attr("selected", "selected");
           form.find("select.lead_reason_for_move>option[value='" + cookie.reasonForMove.replace(/\+/g, ' ') + "']").attr("selected", "selected");
+          form.find("select.lead_preferred_method_of_contact>option[value='" + cookie.preferredMethodOfContact + "']").attr("selected", "selected");
         } else {
           // default to check checkboxes
           form.find('input.lead_opt_in_brochure').attr('checked', true);

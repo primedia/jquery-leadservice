@@ -5,88 +5,88 @@ define(['jquery', 'jquery.cookie'], function($) {
       var pre_update_form = function() {
         if (options.show_hide_params) {
           if (options.show_hide_params.last_name_required == "1") {
-            $('.lead_last_name').show();
+            $('.lead_last_name', form_div).show();
           } else {
-            $('.lead_last_name').hide();
-            $('.lead_first_name label').html("<em>*</em> Your Name:");
+            $('.lead_last_name', form_div).hide();
+            $('.lead_first_name label', form_div).html("<em>*</em> Your Name:");
           }
 
           if (options.show_hide_params.phone_required == "1") {
-            $('em#phone_number').show();
+            $('em#phone_number', form_div).show();
           } else {
-            $('em#phone_number').hide();
+            $('em#phone_number', form_div).hide();
           }
 
           // Show beds & baths if specified
           if (options.show_hide_params.bed_bath_leads == "1") {
-            $('.beds_baths').show();
+            $('.beds_baths', form_div).show();
           } else {
-            $('.beds_baths').hide();
+            $('.beds_baths', form_div).hide();
           }
 
           if (options.show_hide_params.bed_bath_leads_required == "1") {
-            $('em#beds').show();
-            $('em#baths').show();
+            $('em#beds', form_div).show();
+            $('em#baths', form_div).show();
           } else {
-            $('em#beds').hide();
-            $('em#baths').hide();
+            $('em#beds', form_div).hide();
+            $('em#baths', form_div).hide();
           }
 
           if (options.show_hide_params.show_price_range == "1") {
-            $('div.price_range').show();
+            $('div.price_range', form_div).show();
           } else {
-            $('div.price_range').hide();
+            $('div.price_range', form_div).hide();
           }
           if (options.show_hide_params.price_range_required == "1") {
-            $('em#price_range').show();
+            $('em#price_range', form_div).show();
           } else {
-            $('em#price_range').hide();
+            $('em#price_range', form_div).hide();
           }
 
           if (options.show_hide_params.show_reason_for_move == "1") {
-            $('.reason_for_move').show();
+            $('.reason_for_move', form_div).show();
           } else {
-            $('.reason_for_move').hide();
+            $('.reason_for_move', form_div).hide();
           }
           if (options.show_hide_params.reason_for_move_required == "1") {
-            $('em#reason_for_move').show();
+            $('em#reason_for_move', form_div).show();
           } else {
-            $('em#reason_for_move').hide();
+            $('em#reason_for_move', form_div).hide();
           }
 
           if (options.show_hide_params.confirm_email_required == "1") {
-            $('.lead_confirm_email').show();
+            $('.lead_confirm_email', form_div).show();
           } else {
-            $('.lead_confirm_email').hide();
+            $('.lead_confirm_email', form_div).hide();
           }
 
           if (options.show_hide_params.show_move_date == "1") {
-            $('.lead_move_date').show();
+            $('.lead_move_date', form_div).show();
 
             if (options.show_hide_params.move_date_required == "1") {
-              $('em#move_date').show();
+              $('em#move_date', form_div).show();
             } else {
-              $('em#move_date').hide();
+              $('em#move_date', form_div).hide();
             }
 
-            $('.lead_move_date_preference').hide();
+            $('.lead_move_date_preference', form_div).hide();
           } else {
-            $('.lead_move_date_preference').show();
+            $('.lead_move_date_preference', form_div).show();
 
             if (options.show_hide_params.move_date_preference_required == "1") {
-              $('em#move_date_preference').show();
+              $('em#move_date_preference', form_div).show();
             } else {
-              $('em#move_date_preference').hide();
+              $('em#move_date_preference', form_div).hide();
             }
 
-            $('.lead_move_date').hide();
+            $('.lead_move_date', form_div).hide();
           }
 
           // Show preferred method of contact if specified
           if (options.show_hide_params.preferred_method_of_contact == "1") {
-            $('.preferred_method_of_contact').show();
+            $('.preferred_method_of_contact', form_div).show();
           } else {
-            $('.preferred_method_of_contact').hide();
+            $('.preferred_method_of_contact', form_div).hide();
           }
         }
       };

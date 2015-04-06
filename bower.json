@@ -1,6 +1,6 @@
 {
   "name": "jquery-leadservice",
-  "version": "2.0.13",
+  "version": "2.1.0",
   "main": "jquery.leadservice.js",
   "dependencies": {
     "jquery": null,

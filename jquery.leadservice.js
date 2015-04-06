@@ -1,6 +1,7 @@
 define(['jquery', 'jquery.cookie'], function($) {
     $.fn.lead_service = function(options) {
       var caller;
+
       var form_div = $(this);
       var pre_update_form = function() {
         if (options.show_hide_params) {
@@ -221,18 +222,16 @@ define(['jquery', 'jquery.cookie'], function($) {
           data: $(this).serialize(),
           success: function(response) {
             status = 'success';
-            opts.lead_saved();
+            success = opts.lead_saved();
+            if (status == 'success') {
+              $('body').trigger('lead_submission', (success || {}));
+            }
           },
           error: function(req, status, err) {
             if(opts.disable_ajax){
               caller[0].beenSubmitted = false;
             }
             opts.lead_error(req, status, err);
-          },
-          complete: function() {
-            if (status == 'success') {
-              $('body').trigger('lead_submission');
-            }
           }
         });
         return false;

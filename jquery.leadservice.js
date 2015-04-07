@@ -221,7 +221,7 @@ define(['jquery', 'jquery.cookie'], function($) {
           type: 'POST',
           data: $(this).serialize(),
           success: function(response) {
-            data = opts.lead_saved();
+            var data = opts.lead_saved();
             $('body').trigger('lead_submission', (data || {}));
           },
           error: function(req, status, err) {

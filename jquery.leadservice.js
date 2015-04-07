@@ -221,11 +221,8 @@ define(['jquery', 'jquery.cookie'], function($) {
           type: 'POST',
           data: $(this).serialize(),
           success: function(response) {
-            status = 'success';
-            success = opts.lead_saved();
-            if (status == 'success') {
-              $('body').trigger('lead_submission', (success || {}));
-            }
+            data = opts.lead_saved();
+            $('body').trigger('lead_submission', (data || {}));
           },
           error: function(req, status, err) {
             if(opts.disable_ajax){

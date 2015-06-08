@@ -213,7 +213,6 @@ define(['jquery', 'jquery.cookie'], function($) {
       var submitLead = function() {
         caller = $(this);
         var status = 'fail';
-        if (this.beenSubmitted) return false;
         caller.trigger('LeadFormSubmitted');
         this.beenSubmitted = true;
         $.ajax({
